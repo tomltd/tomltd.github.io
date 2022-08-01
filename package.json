@@ -1,0 +1,11 @@
+{
+  "name": "Tom-Freestone-CV",
+  "version": "0.1.0",
+  "author": "Tom Freestone",
+  "devDependencies": {
+    "flightplan": "^0.6.13",
+    "gulp": "*",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.3.1"
+  }
+}

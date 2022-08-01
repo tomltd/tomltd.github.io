@@ -1,0 +1,193 @@
+@import 'vars';
+// layout
+html {
+    font-size: 16px;
+}
+
+body {
+    background: $body;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    * + * {
+        margin-top: 30px;
+    }
+
+    .wrapper {
+        background: $white;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+        margin: 3rem auto;
+        min-height: 1024px; // A4
+        width: 768px; // A4
+        box-shadow: 10px 10px 5px 0px rgba(black, 0.75);
+    }
+}
+
+// Styles
+h1,
+h2,
+h3 {
+    margin-left: 1rem;
+}
+
+a {
+    color: $darkest;
+    text-decoration: none;
+    &:hover {
+        color: $neon;
+    }
+}
+
+.lighter {
+    color: $lighter;
+    margin: 0.5rem 1rem;
+}
+
+ul {
+    margin: 0 0 0 4em;
+    li {
+        margin: 0;
+    }
+}
+
+// Header.
+header {
+    h2 {
+        line-height: .5em;
+        margin-bottom: 0.5rem;
+    }
+
+    #top-image {
+        margin: 0.6em 2em 1em 2em;
+        position: relative;
+    }
+
+    img {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .top {
+        margin: 0;
+    }
+
+    @keyframes topImageFadeInOut {
+        0% {
+            opacity: 1;
+        }
+        45% {
+            opacity: 1;
+        }
+        55% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    #top-image img.top {
+        animation-name: topImageFadeInOut;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 7s;
+        animation-direction: alternate;
+    }
+
+    .headings {
+        position: relative;
+        left: 140px;
+    }
+}
+
+// End of Header.
+section {
+    clear: both;
+    margin-top: 1rem;
+
+    h3.title {
+        margin-top: 1rem;
+    }
+
+    h3 {
+        margin: 0 0 0 1rem;
+    }
+
+    p {
+        line-height: 1.5em;
+        margin: 0 1em 0 4em;
+    }
+}
+
+// End of Section.
+aside {
+    background: $right;
+    margin-top: 0;
+
+    h2 {
+        color: $info;
+        font-size: 1.2rem;
+        margin-top: 2em;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin-left: 1em;
+        line-height: .2em;
+    }
+}
+
+// End of Aside.
+// Media Queries.
+// Medium and up.
+@media all and (min-width: 768px) {
+    main {
+        flex: 1 0;
+        order: 1;
+    }
+
+    aside {
+        order: 2;
+        width: 30%;
+    }
+}
+
+// removes black border on ipad
+@media all and (max-width: 771px) {
+    body .wrapper {
+        margin: 0 !important;
+    }
+}
+
+// mobile
+@media all and (max-width: 767px) {
+    main,
+    aside {
+        flex: 1 100%;
+    }
+
+    aside {
+        flex: 1 auto;
+        order: 2;
+    }
+
+    main {
+        order: 1;
+    }
+}
+
+@media all and (max-width: 500px) {
+    html {
+        font-size: 12px;
+    }
+
+    .wrapper {
+        width: 500px;
+    }
+}
