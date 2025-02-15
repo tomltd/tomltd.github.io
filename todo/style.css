@@ -4,11 +4,34 @@ body {
     padding: 0;
     background: linear-gradient(to bottom right, #667eea, #764ba2);
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center; /* Keep horizontal centering */
+    /* align-items: center;  Remove this line */
     min-height: 100vh;
     color: #333;
 }
+
+/* Media Query for Mobile */
+@media (max-width: 400px) { /* Adjust breakpoint as needed */
+    body {
+        align-items: flex-start; /* Align to top on mobile */
+    }
+    .container {
+        padding: 15px; /* Further reduce padding on smaller screens */
+        font-size: 14px; /* Slightly smaller font size */
+        margin-top: 20px; /* Add some top margin */
+    }
+
+    input[type="text"], button {
+        padding: 8px; /* Reduce padding on smaller screens */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+
+    h1 {
+      font-size: 1.5em; /* Smaller heading */
+    }
+}
+
+/* ... (rest of your CSS styles remain the same) */
 
 .container {
     background-color: #fff;
