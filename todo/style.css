@@ -1,96 +1,116 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #667eea, #764ba2);
+    background: linear-gradient(to bottom right, #667eea, #764ba2); /* Gradient background */
     display: flex;
-    justify-content: center; /* Keep horizontal centering */
-    /* align-items: center;  Remove this line */
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    color: #333;
+    color: #333; /* Dark text for contrast */
 }
-
-/* Media Query for Mobile */
-@media (max-width: 400px) { /* Adjust breakpoint as needed */
-    body {
-        align-items: flex-start; /* Align to top on mobile */
-    }
-    .container {
-        padding: 15px; /* Further reduce padding on smaller screens */
-        font-size: 14px; /* Slightly smaller font size */
-        margin-top: 20px; /* Add some top margin */
-    }
-
-    input[type="text"], button {
-        padding: 8px; /* Reduce padding on smaller screens */
-        font-size: 14px; /* Slightly smaller font size */
-    }
-
-    h1 {
-      font-size: 1.5em; /* Smaller heading */
-    }
-}
-
-/* ... (rest of your CSS styles remain the same) */
 
 .container {
     background-color: #fff;
-    padding: 20px; /* Adjusted padding */
+    padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    width: 90%; /* Occupy most of the screen width */
-    max-width: 450px; /* Set a maximum width */
-    box-sizing: border-box; /* Include padding and border in width */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    width: 450px; /* Slightly wider */
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px; /* Adjusted margin */
-    color: #555;
+    margin-bottom: 25px;
+    color: #555; /* Darker heading */
 }
 
 .input-area {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 input[type="text"] {
     flex-grow: 1;
-    padding: 10px; /* Adjusted padding */
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 6px;
     margin-right: 10px;
-    font-size: 16px;
-    box-sizing: border-box;
+    font-size: 16px; /* Larger font */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 button {
-    padding: 10px 20px; /* Adjusted padding */
-    background-color: #764ba2;
+    padding: 12px 25px;
+    background-color: #764ba2; /* Purple button */
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
-    box-sizing: border-box;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-/* ... (rest of the CSS styles - li, delete-btn, clear-completed, etc. remain the same) */
-
-/* Media Query for Mobile */
-@media (max-width: 400px) { /* Adjust breakpoint as needed */
-    .container {
-        padding: 15px; /* Further reduce padding on smaller screens */
-        font-size: 14px; /* Slightly smaller font size */
-    }
-
-    input[type="text"], button {
-        padding: 8px; /* Reduce padding on smaller screens */
-        font-size: 14px; /* Slightly smaller font size */
-    }
-
-    h1 {
-      font-size: 1.5em; /* Smaller heading */
-    }
+button:hover {
+    background-color: #667eea; /* Lighter purple on hover */
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s; /* Hover effect */
+}
+
+li:hover {
+    background-color: #f8f8f8;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li span {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+li.dragging {
+    opacity: 0.7;
+    background-color: #f0f0f0;
+}
+
+li .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #aaa;
+    margin-left: 10px;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+li .delete-btn:hover {
+    color: #777;
+}
+
+#clear-completed {
+    margin-top: 20px;
+    background-color: #d9534f; /* Red button for clearing */
+}
+
+#clear-completed:hover {
+    background-color: #c9302c;
+}
+
+/* Optional: Add a font from Google Fonts */
+/* <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> */
