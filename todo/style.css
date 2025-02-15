@@ -1,0 +1,116 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #667eea, #764ba2); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333; /* Dark text for contrast */
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    width: 450px; /* Slightly wider */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #555; /* Darker heading */
+}
+
+.input-area {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 16px; /* Larger font */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #764ba2; /* Purple button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #667eea; /* Lighter purple on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s; /* Hover effect */
+}
+
+li:hover {
+    background-color: #f8f8f8;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li span {
+    flex-grow: 1;
+    font-size: 16px;
+}
+
+li.dragging {
+    opacity: 0.7;
+    background-color: #f0f0f0;
+}
+
+li .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #aaa;
+    margin-left: 10px;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+li .delete-btn:hover {
+    color: #777;
+}
+
+#clear-completed {
+    margin-top: 20px;
+    background-color: #d9534f; /* Red button for clearing */
+}
+
+#clear-completed:hover {
+    background-color: #c9302c;
+}
+
+/* Optional: Add a font from Google Fonts */
+/* <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> */
